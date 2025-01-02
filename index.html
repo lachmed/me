@@ -217,6 +217,27 @@
                 </div>
             </div>
 
+
+            <div class="project">
+              <h3>Collaborative Chat With AI</h3>
+              <p>A simple application for building chat room with friends to talk simultaneously with an Ai boot. Could be used to try different prompt collectively or to ask ai questions while chatting with friends and everyone see the answer.</p>
+              <div class="links">
+                  <a href="https://github.com/lachmed/CollaborativeAIChat" target="_blank">Source Code</a>
+                  <a id="ColChatTrigger" style="cursor: pointer;">Preview</a>                    
+              </div>
+              <!-- ColChat Modal -->    
+          <div id="ColChat" class="modal">
+            <span class="close"  id="close5">&times;</span>
+
+
+          <iframe width="75%" height="70%" class="modal-content" src="https://www.youtube.com/embed/R_jOibvXPZc?controls=0&rel=0" title="colaborativeChat Preview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <div id="caption"></div>
+        </div>
+          </div>
+
+
+
             <div class="project" >
                 <h3>RaysMarket: a website for selling caught fish</h3>
                 <p>A Laravel website for selling and buying freshly caught fish directly from fishermen. Recipes and articles are also present in the website with newsletter to inform the subscribers about newly added content</p>
@@ -232,11 +253,6 @@
 <iframe width="75%" height="70%" class="modal-content" src="https://www.youtube.com/embed/r5MnXvzkQ5w?controls=0&rel=0" title="Rays Market Preview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-<!--
-                <video class="modal-content" controls>
-                    <source src="./assets/videos/fishcatcher.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                </video>-->
                 <div id="caption"></div>
             </div>
 
@@ -253,15 +269,6 @@
                 </div>
             </div>
         
-
-            <div class="project">
-                <h3>Single machine scheduling: a comparison</h3>
-                <p>Implementation of Single Machine Scheduling Problem Algorithms (Dynamic programming, Metaheuristics and Hodgson and Moore) using python and comparison of their results based on two variants of the problem.</p>
-                <div class="links">
-                    <!--<a href="#" target="_blank">Read More</a> --> 
-                    <a href="https://lachmed27.pythonanywhere.com" target="_blank">Visit</a>
-                </div>
-            </div>
                                 
             <div class="project">
                 <h3>Research institute website</h3>
@@ -277,11 +284,6 @@
 
 <iframe width="75%" height="70%" class="modal-content" src="https://www.youtube.com/embed/eAVC1jKMz6c?controls=0&rel=0" title="Research Institute Preview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<!--
-              <video class="modal-content" controls>
-                  <source src="./assets/videos/researchInstitute1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-              </video>-->
               <div id="caption"></div>
           </div>
             </div>
@@ -459,6 +461,38 @@ var span = document.getElementById("close3");
 span.onclick = function() {
   damModal.style.display = "none";
 }
+
+
+
+/**ColChatModal**/
+// Get the modal
+var ColChat = document.getElementById("ColChat");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var ColChatTriger = document.getElementById('ColChatTrigger')
+
+var captionText = document.getElementById("caption");
+ColChatTriger.onclick = function(){
+  ColChat.style.display = "block";
+  captionText.innerHTML = "ColChat preview";
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementById("close5");
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  ColChat.style.display = "none";
+}
+
+
+
+
+
+
+
+
+
 
 
 
