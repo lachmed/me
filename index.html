@@ -3,16 +3,15 @@
   <head>
     <!-- Some analytics -->
     
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BSS54LGJH4"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+    <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BSS54LGJH4"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
         gtag('config', 'G-BSS54LGJH4');
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </script>
 
     <!-- bootstrap -->
 
@@ -207,6 +206,32 @@
 
         <div class="projects">
 
+
+
+            <div class="project">
+              <h3>AI Quiz Generator</h3>
+              <p>QuizGenerator is a quizzing solution that helps you effortlessly generate engaging and personalized assessments using AI. Customize quizzes to match your desired difficulty, number of questions, and number of choices. </p>
+              <div class="links">
+                  <a href="https://www.quizgen.xyz" target="_blank">Visit</a>
+                  <a id="QGTrigger" style="cursor: pointer;">Preview</a>                    
+              </div>
+              <!-- QG Modal -->    
+          <div id="QG" class="modal">
+            <span class="close"  id="close6">&times;</span>
+
+
+          <iframe width="75%" height="70%" class="modal-content" src="https://www.youtube.com/embed/oIbIzLkV56Y?controls=0&rel=0" title="colaborativeChat Preview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          
+            <div id="caption"></div>
+        </div>
+          </div>
+
+
+
+
+
+
+          
             <div class="project">
                 <h3>Medical Image Segmentation: Application of Different methods and comparison of results</h3>
                 <p>
@@ -495,6 +520,26 @@ span.onclick = function() {
   ColChat.style.display = "none";
 }
 
+/**QGModal**/
+// Get the modal
+var QG = document.getElementById("QG");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var QGTriger = document.getElementById('QGTrigger')
+
+var captionText = document.getElementById("caption");
+QGTriger.onclick = function(){
+  QG.style.display = "block";
+  captionText.innerHTML = "QuizGenerator preview";
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementById("close6");
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  QG.style.display = "none";
+}
 
 
 
