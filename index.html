@@ -9,7 +9,7 @@
     <!-- Redirect after 3 seconds -->
     <meta
       http-equiv="refresh"
-      content="2;url=https://my-website-render.onrender.com"
+      content="3;url=https://my-website-render.onrender.com"
     />
   </head>
   <body
@@ -35,5 +35,11 @@
       <!-- Sub-message -->
       <p class="text-white text-xl mt-4">Please wait...</p>
     </div>
+
+    <script>
+      setTimeout(() => {
+        window.location.href = "./indexOld.html";
+      }, 5000);
+    </script>
   </body>
 </html>
